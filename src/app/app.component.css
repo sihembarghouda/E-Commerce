@@ -131,7 +131,7 @@ body {
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease;
-  width: 300px;
+  width: 270px;
 }
 
 .product-card:hover {

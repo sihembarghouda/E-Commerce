@@ -13,6 +13,58 @@
     </div>
   </header>
   
+  <section class="marquee-container">
+    <div class="rich-text__blocks marquee marquee--hover-pause">
+        <h2 class="rich-text__heading rte marquee__content h2">
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+            <span>✹ BLACK FRIDAY</span>
+        </h2>
+    </div>
+</section>
+
+<style>
+/* Bande mobile */
+.marquee-container {
+    background-color: brown; /* Couleur de fond */
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.5rem 0; /* Réduire la hauteur */
+}
+
+.marquee {
+    display: flex;
+    animation: scroll-left 15s linear infinite;
+}
+
+.marquee--hover-pause:hover {
+    animation-play-state: paused;
+}
+
+.marquee__content span {
+    display: inline-block;
+    font-size: 1rem; /* Réduire la taille de la police */
+    margin: 0 0.5rem; /* Réduire les marges */
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+/* Définition de l'animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+</style>
+
 
   <!-- Product Grid -->
   <main class="product-grid">

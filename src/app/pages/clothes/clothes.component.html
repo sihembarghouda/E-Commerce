@@ -1,1 +1,41 @@
-<p>clothes works!</p>
+<div class="clothes-container">
+    <div *ngFor="let item of clothes" class="clothes-card">
+      <!-- Image de l'article -->
+      <div class="card-image">
+        <img [src]="item.image" [alt]="item.name" class="clothes-image" />
+      </div>
+      
+      
+      <!-- Informations sur l'article -->
+      <div class="card-body">
+        <h3 class="clothes-name">{{ item.name }}</h3>
+        <p class="clothes-price">{{ item.price | currency:'EUR' }}</p>
+      </div>
+      
+      <!-- Bouton commander -->
+      <div class="card-footer">
+        <button class="order-button" (click)="orderItem(item)">Commander</button>
+      </div>
+    </div>
+  </div>
+  <div class="clothes-container">
+    <div *ngFor="let item of clothes" class="clothes-card">
+      <!-- Image de l'article -->
+      <div class="card-image">
+        <img [src]="item.image" [alt]="item.name" class="clothes-image" />
+      </div>
+      
+      
+      <!-- Informations sur l'article -->
+      <div class="card-body">
+        <h3 class="clothes-name">{{ item.name }}</h3>
+        <p class="clothes-price">{{ item.price | currency:'EUR' }}</p>
+      </div>
+      
+      <!-- Bouton commander -->
+      <div class="card-footer">
+        <button class="order-button" (click)="orderItem(item)">Commander</button>
+      </div>
+    </div>
+  </div>
+  

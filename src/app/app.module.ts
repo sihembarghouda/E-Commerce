@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClothesComponent } from './pages/clothes/clothes.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
-import { AccessoriesComponent } from './pages/accessories/accessories.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { bagsComponent } from './pages/bags/bags.component';
-import { SalesComponent } from './pages/sales/sales.component';
+
 import { HomeComponent } from './pages/home/home.component';
+import { OrderFormComponent } from './order-form/order-form.component';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { RegisterComponent } from './register/register.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations:[
@@ -17,14 +20,16 @@ import { HomeComponent } from './pages/home/home.component';
     bagsComponent,
     ClothesComponent,
     ShoesComponent,
-    AccessoriesComponent,
     ConnexionComponent,
-    SalesComponent,
-    HomeComponent
+    HomeComponent,
+    OrderFormComponent,
+    RegisterComponent,
+    PanierComponent,    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()

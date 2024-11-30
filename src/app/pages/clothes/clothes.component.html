@@ -1,41 +1,30 @@
 <div class="clothes-container">
-    <div *ngFor="let item of clothes" class="clothes-card">
-      <!-- Image de l'article -->
-      <div class="card-image">
-        <img [src]="item.image" [alt]="item.name" class="clothes-image" />
-      </div>
-      
-      
-      <!-- Informations sur l'article -->
-      <div class="card-body">
-        <h3 class="clothes-name">{{ item.name }}</h3>
-        <p class="clothes-price">{{ item.price | currency:'EUR' }}</p>
-      </div>
-      
-      <!-- Bouton commander -->
-      <div class="card-footer">
-        <button class="order-button" (click)="orderItem(item)">Commander</button>
-      </div>
+  <div *ngFor="let item of clothes" class="clothes-card">
+    <!-- Image de l'article -->
+    <div class="card-image">
+      <img [src]="item.image" [alt]="item.name" class="clothes-image" />
+    </div>
+    
+    <!-- Informations sur l'article -->
+    <div class="card-body">
+      <h3 class="clothes-name">{{ item.name }}</h3>
+      <p class="clothes-price">{{ item.price }} DT</p>
+    </div>
+    
+    <!-- Boutons -->
+    <div class="card-footer">
+      <button class="select-button" 
+      [ngClass]="{ 'selected': item.selected }"
+      (click)="toggleSelectItem(item)">
+      {{ item.selected ? 'Sélectionné' : 'Sélectionner' }}
+    </button>
+    <button class="order-button" (click)="orderItem(item)">Commander</button>
+    <div *ngIf="item.showSizes" class="sizes-available">
+      <p>Tailles disponibles :</p>
+      <button class="size-button">S</button>
+      <button class="size-button">M</button>
+      <button class="size-button">L</button>
     </div>
   </div>
-  <div class="clothes-container">
-    <div *ngFor="let item of clothes" class="clothes-card">
-      <!-- Image de l'article -->
-      <div class="card-image">
-        <img [src]="item.image" [alt]="item.name" class="clothes-image" />
-      </div>
-      
-      
-      <!-- Informations sur l'article -->
-      <div class="card-body">
-        <h3 class="clothes-name">{{ item.name }}</h3>
-        <p class="clothes-price">{{ item.price | currency:'EUR' }}</p>
-      </div>
-      
-      <!-- Bouton commander -->
-      <div class="card-footer">
-        <button class="order-button" (click)="orderItem(item)">Commander</button>
-      </div>
-    </div>
-  </div>
-  
+</div>
+ 

@@ -1,0 +1,34 @@
+<div class="shoes-container">
+    <div *ngFor="let item of shoes" class="shoes-card">
+      <!-- Image de l'article -->
+      <div class="card-image">
+        <img [src]="item.image" [alt]="item.name" class="shoes-image" />
+      </div>
+      
+      <!-- Informations sur l'article -->
+      <div class="card-body">
+        <h3 class="shoes-name">{{ item.name }}</h3>
+        <p class="shoes-price">{{ item.price }} DT</p>
+      </div>
+      
+      <div class="card-footer">
+        <button class="select-button" 
+        [ngClass]="{ 'selected': item.selected }"
+        (click)="toggleSelectItem(item)">
+        {{ item.selected ? 'Sélectionné' : 'Sélectionner' }}
+      </button>
+      <button class="order-button" (click)="orderItem(item)">Commander</button>
+      <div *ngIf="item.showSizes" class="sizes-available">
+        <p>Pointures disponibles :</p>
+        <button class="size-button">36</button>
+        <button class="size-button">37</button>
+        <button class="size-button">38</button>
+        <button class="size-button">39</button>
+        <button class="size-button">40</button>
+        <button class="size-button">41</button>
+      </div>
+    </div>
+    </div>
+  </div>
+   
+  

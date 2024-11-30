@@ -94,4 +94,7 @@ body {
   .btn:hover {
     background-color: #0056b3;
   }
-  
+
+  .se-connecter{
+    margin-right: 10px;
+  }

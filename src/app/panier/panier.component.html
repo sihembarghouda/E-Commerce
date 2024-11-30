@@ -1,0 +1,33 @@
+<div class="cart-page">
+    <div class="cart-empty">
+      <img src="https://cdn-icons-png.flaticon.com/512/3508/3508335.png" alt="Panier vide" class="empty-cart-image">
+      <h2>Votre panier est vide</h2>
+      <p>Ajoutez vos produits préférés pour les retrouver ici.</p>
+      <!-- Garder un seul bouton -->
+      <a href="#" id="btn-shop" class="btn-shop">Découvrir nos produits</a>
+      <div class="recommended-products">
+        <h3>Produits recommandés :</h3>
+        <div class="products">
+          <div class="product">
+            <img src="https://numero.com/wp-content/uploads/2024/06/deCC81fileCC81-louis-vuitton-automne-hiver-2024-2025-pharrell-williams-LOUIS_VUITTON_MENS_FALL_WINTER_2024_DETAILS_45.jpg" alt="Produit 1">
+            <p>Produit 1</p>
+            <span>20 €</span>
+          </div>
+          <div class="product">
+            <img src="https://media.gqmagazine.fr/photos/65aa60ad071a12bb12f7a076/master/w_1600%2Cc_limit/GettyImages-1938776792.jpg" alt="Produit 2">
+            <p>Produit 2</p>
+            <span>15 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Script pour la redirection -->
+  <script>
+    document.getElementById('btn-shop').addEventListener('click', function(e) {
+      e.preventDefault(); // Empêche le comportement par défaut du lien
+      window.location.href = 'index.html'; // Remplace par l'URL de ta page d'accueil
+    });
+  </script>
+  
